@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pruebaoctane.selenium.pruebaoctaneselenium.GoogleSearch
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.995 s - in com.pruebaoctane.selenium.pruebaoctaneselenium.GoogleSearch
