@@ -1,6 +1,6 @@
 package com.pruebaoctane.selenium.pruebaoctaneselenium;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,16 +12,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.restassured.RestAssured;
-
-public class GoogleSearch {
-	
-	private WebDriver driver;
+public class GoogleTest3 {
+private WebDriver driver;
 	
 	@Before
 	public void setUp(){
 		
-
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
 		
 		driver = new ChromeDriver();
@@ -38,7 +34,8 @@ public class GoogleSearch {
 		searchBox.submit();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertEquals("Hexaware - Buscar con Google", driver.getTitle());
+		driver.findElement(By.xpath("//a[@href='https://www.glassdoor.com.mx/Evaluaciones/Hexaware-Technologies-Evaluaciones-E29098.htm']")).click();
+		//assertEquals("Hexaware - Buscar con Google", driver.getTitle());
 	}
 	@After
 	public void tearDown(){
